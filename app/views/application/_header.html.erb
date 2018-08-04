@@ -5,7 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto text-white bg-dark">
       <li class="nav-item">
         <%= header_link_item('Home', root_path) %>
       </li>
@@ -18,11 +18,11 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% if @current_user %>
-            <%= link_to 'マイページ', mypage_path, class: 'dropdown-item' %>
-            <%= link_to 'ログアウト', logout_path, method: :delete, class: 'dropdown-item' %>
+            <%= link_to ' My page', smypage_path, class: 'dropdown-item' %>
+            <%= link_to 'Logout', logout_path, method: :delete, class: 'dropdown-item' %>
           <% else %>
-            <%= link_to '登録', new_user_path, class: 'dropdown-item' %>
-            <%= link_to 'ログイン', root_path, class: 'dropdown-item' %>
+            <%= link_to 'Sign Up', new_user_path, class: 'dropdown-item' %>
+            <%= link_to 'Login', root_path, class: 'dropdown-item' %>
           <% end %>
         </div>
       </li>
